@@ -12,26 +12,32 @@
   box-sizing: border-box;
 }
 
-body { font-family: sans-serif; }
+body { 
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+}
 
 .gallery {
   top: 200px;  
-  background: rgb(255, 255, 255);
+  
   
 }
 
 .gallery-cell {
-  width: 46%;
-  height: 200px;
+  width: 36%;
+  height: 240px;
   margin-right: 20px;
   margin-left: 20px;
   border-radius: 30px;
   counter-increment: gallery-cell;
+  box-shadow: 5px 5px 5px 6px rgba(0, 0, 0, 0.6);
+
 }
 .gallery-cell:nth-child(1){
   background: url("1.PNG") center;
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .gallery-cell:nth-child(2){
@@ -57,7 +63,35 @@ body { font-family: sans-serif; }
   background-size: contain;
   background-repeat: no-repeat;
 }
+.gallery-cell:nth-child(6){
+  background: url("6.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
+.gallery-cell:nth-child(7){
+  background: url("7.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gallery-cell:nth-child(8){
+  background: url("8.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gallery-cell:nth-child(9){
+  background: url("9.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gallery-cell:nth-child(10){
+  background: url("10.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 /* cell number */
 .gallery-cell:before {
   display: block;
@@ -67,12 +101,21 @@ body { font-family: sans-serif; }
   font-size: 80px;
   color: white;
 }
-
+@media(max-width:600px){
+   .gallery-cell{
+       width: 80%;
+   }
+}
     </style>
 </head>
 <body>
     <div class="gallery js-flickity"
   data-flickity-options='{ "wrapAround": true }'>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
   <div class="gallery-cell"></div>
   <div class="gallery-cell"></div>
   <div class="gallery-cell"></div>
