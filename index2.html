@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+    <style>
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.gallery {
+  top: 200px;  
+  background: rgb(255, 255, 255);
+  
+}
+
+.gallery-cell {
+  width: 46%;
+  height: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 30px;
+  counter-increment: gallery-cell;
+}
+.gallery-cell:nth-child(1){
+  background: url("1.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gallery-cell:nth-child(2){
+  background: url("2.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gallery-cell:nth-child(3){
+  background: url("3.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gallery-cell:nth-child(4){
+  background: url("4.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.gallery-cell:nth-child(5){
+  background: url("5.PNG") center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="gallery js-flickity"
+  data-flickity-options='{ "wrapAround": true }'>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+</body>
+</html>
